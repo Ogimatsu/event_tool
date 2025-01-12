@@ -169,3 +169,21 @@ cython_debug/
 
 # PyPI configuration file
 .pypirc
+
+# Kivy specific
+*.pyc
+__pycache__/
+.kivy/
+build/
+dist/
+*.spec
+
+# Virtual environment
+venv/
+
+# IDE specific
+.vscode/
+.idea/
+
+# OS specific
+.DS_Store
