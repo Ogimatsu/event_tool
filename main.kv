@@ -1,0 +1,53 @@
+<MainLayout>:
+    orientation: 'vertical'
+
+    # ヘッダー
+    BoxLayout:
+        size_hint_y: 0.1
+        canvas.before:
+            Color:
+                rgba: 0.5, 0.9, 0.5, 1
+            Rectangle:
+                pos: self.pos
+                size: self.size
+        Label:
+            text: "作成したい表の項目を追加してください"
+            font_name: "NotoSansJP-Regular"
+            font_size: "18sp"
+            color: 0, 0, 0, 1
+
+    # メインコンテンツ
+    BoxLayout:
+        size_hint_y: 0.8
+        canvas.before:
+            Color:
+                rgba: 0.98, 0.96, 0.88, 1
+            Rectangle:
+                pos: self.pos
+                size: self.size
+
+    # フッター
+    BoxLayout:
+        size_hint_y: 0.1
+        canvas.before:
+            Color:
+                rgba: 0.5, 0.9, 0.5, 1
+            Rectangle:
+                pos: self.pos
+                size: self.size
+        Button:
+            text: "名簿"
+            font_name: "NotoSansJP-Regular"
+            font_size: "18sp"
+            background_normal: ""
+            background_color: 0, 0, 0, 0
+            color: 0, 0, 0, 1
+            size_hint_x: 0.5
+        Button:
+            text: "収支"
+            font_name: "NotoSansJP-Regular"
+            font_size: "18sp"
+            background_normal: ""
+            background_color: 0, 0, 0, 0
+            color: 0, 0, 0, 1
+            size_hint_x: 0.5
