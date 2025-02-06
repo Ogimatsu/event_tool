@@ -1,5 +1,8 @@
 <MainLayout>:
+    # 画面レイアウトの共通部分
     orientation: 'vertical'
+    header_text: header_label.text
+    content: content_box
 
     # ヘッダー
     BoxLayout:
@@ -11,13 +14,15 @@
                 pos: self.pos
                 size: self.size
         Label:
-            text: "作成したい表の項目を追加してください"
+            id: header_label
+            text: root.header_text
             font_name: "NotoSansJP-Regular"
             font_size: "18sp"
             color: 0, 0, 0, 1
 
     # メインコンテンツ
     BoxLayout:
+        id: content_box
         size_hint_y: 0.8
         canvas.before:
             Color:
@@ -43,6 +48,7 @@
             background_color: 0, 0, 0, 0
             color: 0, 0, 0, 1
             size_hint_x: 0.5
+            on_press: root.click_meibo()
         Button:
             text: "収支"
             font_name: "NotoSansJP-Regular"
@@ -51,3 +57,4 @@
             background_color: 0, 0, 0, 0
             color: 0, 0, 0, 1
             size_hint_x: 0.5
+            on_press: root.click_syushi()
