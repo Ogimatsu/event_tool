@@ -187,3 +187,6 @@ venv/
 
 # OS specific
 .DS_Store
+
+# 仮想環境
+venv_py312/
